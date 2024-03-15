@@ -32,6 +32,3 @@ mv $SCRIPT_DIR/fastq_breseq_* $SCRIPT_DIR/logs
 mkdir -p $OUT_DIR/fastqc_html $OUT_DIR/fastqc_zip
 mv $FASTQDIR/*fastqc.html $OUT_DIR/fastqc_html
 mv $FASTQDIR/*fastqc.zip $OUT_DIR/fastqc_zip
-
-
-
