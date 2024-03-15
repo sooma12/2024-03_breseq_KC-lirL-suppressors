@@ -28,3 +28,9 @@ the ‘DNA Sequencing Stats.xlsx’ file.
 
 
 ## 5. Analysis
+
+
+Try gdtools COMPARE (part of breseq package)
+POTENTIALLY USEFUL: gdtools APPLY -f GENBANK -o updated.gbk -r reference.gbk input.gd
+-> Lets you create an updated genbank file containing the mutations from a breseq run to use as a new reference...
+-> Try this with MSA9/11/13!!
