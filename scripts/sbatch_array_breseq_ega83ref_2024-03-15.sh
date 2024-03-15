@@ -6,8 +6,8 @@
 #SBATCH --ntasks=12
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=100G
-#SBATCH --output=/work/geisingerlab/Mark/
-#SBATCH --error=/work/geisingerlab/Mark/
+#SBATCH --output=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors/logs/%x-%j.out
+#SBATCH --error=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors/logs/%x-%j.err
 #SBATCH --mail-type=END,FAIL
 #SBATCH --open-mode=append
 #SBATCH --mail-user=soo.m@northeastern.edu
@@ -20,10 +20,10 @@ REFERENCE_CHR=/work/geisingerlab/Mark/REF_GENOMES/AB_17978_ega83/EGA83ref.gff3
 REFERENCE_PAB1=/work/geisingerlab/Mark/REF_GENOMES/AB_17978_ega83/CP000522.gbk
 REFERENCE_PAB2=/work/geisingerlab/Mark/REF_GENOMES/AB_17978_ega83/CP000523.gbk
 REFERENCE_PAB3=/work/geisingerlab/Mark/REF_GENOMES/AB_17978_ega83/CP012005.gbk
-WORK_DIR=
-SAMPLE_SHEET=${WORK_DIR}/
+WORK_DIR=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors
+SAMPLE_SHEET=${WORK_DIR}/data/fastq/sample_sheet.txt
 # Output filepath; bash magic below will make individual output filepaths by strain ID
-OUT_PATH=${WORK_DIR}/breseq_output
+OUT_PATH=${WORK_DIR}/output/breseq
 
 echo "Starting breseq SBATCH script $(date)"
 

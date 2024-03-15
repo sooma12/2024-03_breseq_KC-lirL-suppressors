@@ -6,10 +6,10 @@
 # IMPORTANT NOTE: file paths to fastq and sample_sheet.txt are hard-coded. Sample sheet construction code relies on specific file paths (see lines 29-34).
 
 # Location of fastq files
-WORK_DIR=
-IN_PATH=${WORK_DIR}/
+WORK_DIR=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors
+IN_PATH=${WORK_DIR}/data/fastq
 # Output filepath; bash magic below will make individual output filepaths by strain ID
-SAMPLE_SHEET=${WORK_DIR}/
+SAMPLE_SHEET=${WORK_DIR}/data/fastq/sample_sheet.txt
 
 # bash magic to get file lists and create a sample sheet (lists paired files for each strain)
 # See https://www.biostars.org/p/449164/

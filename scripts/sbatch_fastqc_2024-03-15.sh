@@ -4,8 +4,8 @@
 #SBATCH --time=04:00:00
 #SBATCH -N 1
 #SBATCH -n 2
-#SBATCH --output=/work/geisingerlab/Mark/
-#SBATCH --error=/work/geisingerlab/Mark/
+#SBATCH --output=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors/logs/%x-%j.out
+#SBATCH --error=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors/logs/%x-%j.err
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=soo.m@northeastern.edu
 
@@ -16,9 +16,10 @@ echo "Loading environment and tools"
 module load OpenJDK/19.0.1
 module load fastqc/0.11.9
 
-FASTQDIR=/work/geisingerlab/Mark/2023-10_breseq_lirL-suppressors/input
-OUT_DIR=/work/geisingerlab/Mark/2023-10_breseq_lirL-suppressors/fastqc_output
-SCRIPT_DIR=/work/geisingerlab/Mark/2023-10_breseq_lirL-suppressors/scripts
+WORK_DIR=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors
+FASTQDIR=${WORK_DIR}/data/fastq
+OUT_DIR=${WORK_DIR}/output/fastqc
+SCRIPT_DIR=${WORK_DIR}/scripts
 
 mkdir -p $FASTQDIR $OUT_DIR $SCRIPT_DIR
 
