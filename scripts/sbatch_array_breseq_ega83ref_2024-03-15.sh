@@ -2,16 +2,15 @@
 #SBATCH --partition=short
 #SBATCH --job-name=breseq_array
 #SBATCH --time=04:00:00
-#SBATCH --array=1-10%11
-#SBATCH --ntasks=12
+#SBATCH --array=1-23%24
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=100G
-#SBATCH --output=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors/logs/%x-%j.out
-#SBATCH --error=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors/logs/%x-%j.err
+#SBATCH --output=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors/logs/%x_%A_%a.out
+#SBATCH --error=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors/logs/%x_%A_%a.err
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=soo.m@northeastern.edu
 
-## MWS March 15, 2024
+## MWS March 18, 2024 updated
 
 # Files; note that I needed to use plasmid genbank files instead of gff3.  EGA83ref.gff3 has the ##FASTA at the bottom.. maybe why it works?  unclear to me
 REFERENCE_CHR=/work/geisingerlab/Mark/REF_GENOMES/AB_17978_ega83/EGA83ref.gff3
