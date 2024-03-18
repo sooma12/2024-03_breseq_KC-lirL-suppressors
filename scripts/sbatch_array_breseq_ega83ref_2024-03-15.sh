@@ -45,7 +45,4 @@ r2=`sed -n "$SLURM_ARRAY_TASK_ID"p $SAMPLE_SHEET |  awk '{print $3}'`
 echo "Running breseq on files $r1 and $r2"
 echo breseq -r ${REFERENCE_CHR} -r ${REFERENCE_PAB1} -r ${REFERENCE_PAB2} -r ${REFERENCE_PAB3} -o ${OUT_PATH}/${name} ${r1} ${r2}
 
-echo "cleaning up"
-rm R1.list R2.list
-
 echo "breseq script complete $(date)"
