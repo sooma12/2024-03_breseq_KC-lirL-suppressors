@@ -2,7 +2,7 @@
 #SBATCH --partition=short
 #SBATCH --job-name=breseq_array
 #SBATCH --time=04:00:00
-#SBATCH --array=1-23%24
+#SBATCH --array=1-23%5
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=100G
 #SBATCH --output=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors/logs/%x_%A_%a.out
