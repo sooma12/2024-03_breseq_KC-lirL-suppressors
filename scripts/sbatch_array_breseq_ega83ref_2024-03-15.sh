@@ -9,11 +9,9 @@
 #SBATCH --output=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors/logs/%x-%j.out
 #SBATCH --error=/work/geisingerlab/Mark/breseq_suppressor_mutations/2024-03_breseq_KC-lirL-suppressors/logs/%x-%j.err
 #SBATCH --mail-type=END,FAIL
-#SBATCH --open-mode=append
 #SBATCH --mail-user=soo.m@northeastern.edu
 
 ## MWS March 15, 2024
-## TODO: I added open-mode=append to sbatch header and added 'echo' before the breseq command.  See what this does to logs.
 
 # Files; note that I needed to use plasmid genbank files instead of gff3.  EGA83ref.gff3 has the ##FASTA at the bottom.. maybe why it works?  unclear to me
 REFERENCE_CHR=/work/geisingerlab/Mark/REF_GENOMES/AB_17978_ega83/EGA83ref.gff3
@@ -43,6 +41,6 @@ r1=`sed -n "$SLURM_ARRAY_TASK_ID"p $SAMPLE_SHEET |  awk '{print $2}'`
 r2=`sed -n "$SLURM_ARRAY_TASK_ID"p $SAMPLE_SHEET |  awk '{print $3}'`
 
 echo "Running breseq on files $r1 and $r2"
-echo breseq -r ${REFERENCE_CHR} -r ${REFERENCE_PAB1} -r ${REFERENCE_PAB2} -r ${REFERENCE_PAB3} -o ${OUT_PATH}/${name} ${r1} ${r2}
+breseq -r ${REFERENCE_CHR} -r ${REFERENCE_PAB1} -r ${REFERENCE_PAB2} -r ${REFERENCE_PAB3} -o ${OUT_PATH}/${name} ${r1} ${r2}
 
 echo "breseq script complete $(date)"
