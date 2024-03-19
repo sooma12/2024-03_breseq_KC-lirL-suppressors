@@ -1,0 +1,4 @@
+Wed Nov 22 04:38:42 2023
+
+breseq -r /work/geisingerlab/Mark/REF_GENOMES/AB_17978_ega83/EGA83ref.gff3 -r /work/geisingerlab/Mark/REF_GENOMES/AB_17978_ega83/CP000522.gbk -r /work/geisingerlab/Mark/REF_GENOMES/AB_17978_ega83/CP000523.gbk -r /work/geisingerlab/Mark/REF_GENOMES/AB_17978_ega83/CP012005.gbk -o /work/geisingerlab/Mark/2023-10_breseq_lirL-suppressors/breseq_output/2023-11-20/MSA13 /work/geisingerlab/Mark/2023-10_breseq_lirL-suppressors/input/MSA13_S256_R1_001.fastq /work/geisingerlab/Mark/2023-10_breseq_lirL-suppressors/input/MSA13_S256_R2_001.fastq
+
